@@ -1,7 +1,7 @@
 from turtle import Turtle
 
-SCREEN_WIDTH = 600
-SCREEN_HEIGHT = 600
+SCREEN_WIDTH = 580
+SCREEN_HEIGHT = 580
 
 
 class Wall(Turtle):
@@ -10,7 +10,7 @@ class Wall(Turtle):
         self.hideturtle()
         self.color("white")
         self.teleport(x=(SCREEN_WIDTH / 2 * (-1)), y=(SCREEN_HEIGHT / 2 * (-1)))
-        self.pensize(10)
+        # self.pensize(10)
 
     def draw_wall(self):
         self.forward(SCREEN_WIDTH)

@@ -31,7 +31,7 @@ class Snake:
         self.add_segment(self.segments[-1].pos())
 
     def check_colision_with_self(self):
-        for segment in self.segments[1::]:
+        for segment in self.segments[1:]:
             if self.head.distance(segment) < 10:
                 return True
         return False

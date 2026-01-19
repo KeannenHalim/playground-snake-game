@@ -37,11 +37,13 @@ while game_is_on:
         scoreboard.increase_score()
 
     if (
-        snake.head.xcor() > 280
-        or snake.head.xcor() < -280
-        or snake.head.ycor() > 280
-        or snake.head.ycor() < -280
+        round(snake.head.xcor()) > 280
+        or round(snake.head.xcor()) < -280
+        or round(snake.head.ycor()) > 280
+        or round(snake.head.ycor()) < -280
     ):
+        print(f"{snake.head.xcor()}, {snake.head.ycor()}")
+        print(repr(f"{snake.head.xcor()}, {snake.head.ycor()}"))
         scoreboard.game_over()
         game_is_on = False
 
